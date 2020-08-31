@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>视频</title>
+	<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+	<style type="text/css">
+		.item{
+			padding: 20px
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+	  <a v-for="(value, key) in list" :href="url + value" class="item">
+			{{key}}
+		</a>
+	</div>
+	<script type="text/javascript">
+		const o = {
+			1: "https://v.qq.com/x/cover/rjvr8psrvic4567/s0030alfn7k.html",
+			2: "https://v.qq.com/x/cover/rjvr8psrvic4567/s0030do77yd.html",
+			3: "https://v.qq.com/x/cover/rjvr8psrvic4567/m0030xtrpfn.html",
+			4: "https://v.qq.com/x/cover/rjvr8psrvic4567/d0030dgxpc6.html",
+			5: "https://v.qq.com/x/cover/rjvr8psrvic4567/e00307czvsr.html",
+			6: "https://v.qq.com/x/cover/rjvr8psrvic4567/p0030xlkhiw.html",
+			7: "https://v.qq.com/x/cover/rjvr8psrvic4567/u0030ffwcz9.html",
+			8: "https://v.qq.com/x/cover/rjvr8psrvic4567/v00305fi8m1.html",
+			9: "https://v.qq.com/x/cover/rjvr8psrvic4567/h0030ykqw6c.html",
+			10: "https://v.qq.com/x/cover/rjvr8psrvic4567/c0030l3obx9.html",
+			11: "https://v.qq.com/x/cover/rjvr8psrvic4567/q0030if5chu.html",
+			12: "https://v.qq.com/x/cover/rjvr8psrvic4567/q0030i730m5.html",
+			13: "https://v.qq.com/x/cover/rjvr8psrvic4567/v00309nr6cy.html",
+			14: "https://v.qq.com/x/cover/rjvr8psrvic4567/x0030a8f8hl.html",
+			15: "https://v.qq.com/x/cover/rjvr8psrvic4567/i0030imzhwf.html",
+			16: "https://v.qq.com/x/cover/rjvr8psrvic4567/e0030pc4fw4.html",
+			17: "https://v.qq.com/x/cover/rjvr8psrvic4567/r00302in0j0.html",
+			18: "https://v.qq.com/x/cover/rjvr8psrvic4567/c0030w5sltk.html",
+			19: "https://v.qq.com/x/cover/rjvr8psrvic4567/q003040mn4j.html",
+			20: "https://v.qq.com/x/cover/rjvr8psrvic4567/g00303ens1n.html",
+			21: "https://v.qq.com/x/cover/rjvr8psrvic4567/j00304y978e.html",
+			22: "https://v.qq.com/x/cover/rjvr8psrvic4567/w0030pbqrfp.html",
+			23: "https://v.qq.com/x/cover/rjvr8psrvic4567/p00302023fg.html",
+			24: "https://v.qq.com/x/cover/rjvr8psrvic4567/t0030fr1myq.html",
+			25: "https://v.qq.com/x/cover/rjvr8psrvic4567/c00309i9bys.html",
+			26: "https://v.qq.com/x/cover/rjvr8psrvic4567/f00303axmkv.html",
+			27: "https://v.qq.com/x/cover/rjvr8psrvic4567/p0030xwix4s.html",
+			28: "https://v.qq.com/x/cover/rjvr8psrvic4567/s003021b5op.html",
+			29: "https://v.qq.com/x/cover/rjvr8psrvic4567/z0030vjj65c.html",
+			30: "https://v.qq.com/x/cover/rjvr8psrvic4567/q0030vauxi3.html",
+			31: "https://v.qq.com/x/cover/rjvr8psrvic4567/f0030bv99ta.html",
+			32: "https://v.qq.com/x/cover/rjvr8psrvic4567/y0030qp14je.html",
+			33: "https://v.qq.com/x/cover/rjvr8psrvic4567/a00300kaibt.html",
+			34: "https://v.qq.com/x/cover/rjvr8psrvic4567/g0030kopzeu.html",
+			35: "https://v.qq.com/x/cover/rjvr8psrvic4567/p0030fhblnc.html"
+		}
+
+		new Vue({
+			el: '#app',
+		  data: {
+		  	url: 'http://vip.66parse.club/?url=',
+		    list: o,
+		  },
+		  created: function () {
+		  }
+		}) 
+
+	</script>
+</body>
+</html>
