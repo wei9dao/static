@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+  <script src="cartoon.js"></script>
+  <script src="cartoon.tool.js"></script>
+  <style>
+    img{
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      border: 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" v-if="!hide">
+    <ul class="list-group" v-if="!toItem">
+      <li class="list-group-item" v-for="item in list" @click="onClick(item)">{{item.name}}</li>
+    </ul>
+    <div v-else>
+      <div>
+        <img-loader v-for="item in toItem.images" :src="item"></img-loader>
+        <button class="btn btn-default btn-lg pull-right" type="button" @click="next(toItem.next_chapter_id)" >下一单</button>
+      </div>
+    </div>
+  </div>
+<script>
+
+  new Vue({
+    data: {
+      hide: true,
+      list :res,
+      toItem: null
+    },
+    el: '#app',
+    methods: {
+      onClick(item){
+        this.toItem = item
+        window.document.title = this.toItem.name
+        window.scrollTo(0,0)
+      },
+      next(id){
+        this.toItem = this.list.find(item => item.chapter_id === id)
+        window.document.title = this.toItem.name
+        window.scrollTo(0,0)
+      },
+      getQueryString(name){
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+          return unescape(r[2]);
+        }
+        return null;
+      }
+    },
+    created: function () {
+      if(this.getQueryString("a") === "123"){
+        this.hide = false
+      }
+      // this.toItem = this.list[0]
+    }
+  })
+</script>
+</body>
+</html>
