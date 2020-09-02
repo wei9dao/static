@@ -22,6 +22,7 @@ Vue.component("ImgLoader",{
       var e = this.native
       e.open('GET', this.domain + srcReplace, true);
       e.timeout = 0;
+      e.setRequestHeader('Content-Security-Policy', 'upgrade-insecure-requests')
       e.responseType = 'text';
       e.onload = () =>{
         if (e.readyState === 4 && e.status === 200) {
