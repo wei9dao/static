@@ -8,7 +8,7 @@ Vue.component("ImgLoader",{
   template: `<img :src="base64Image">`,
   data:  function() {
     return {
-      domain: 'http://ac.wet8955.cn/',
+      domain: '//ac.wet8955.cn/',
       base64Image: null,
       native: new XMLHttpRequest()
     }
